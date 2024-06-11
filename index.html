@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-02</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="instruction">
+        Top Ring -> To reset,
+        clock -> To start, to lap
+    </div>
+    <div class="analog-stopwatch">
+        <div class="circlebar"></div>
+        <div class="topbar"></div>
+        <div class="middlebar"></div>
+        <div class="clock glow">
+            <div class="sidetopbar"></div>
+            <div class="sidemiddlebar"></div>
+            <div class="hand point"></div>
+            <div class="hand second-hand"></div>
+            <div class="hand msecond-hand"></div>
+            <div class="hand revsecond-hand"></div>
+            <div class="hand revmsecond-hand"></div>
+        </div>
+    </div>
+    <div class="digital-stopwatch">
+        <div id="timer" class="watch big">00:00:00</div>
+        <ol id="laps" class="watch small" reversed></ol>
+        <div id="buttons">
+            <button id="start_stop">Start</button>
+            <button id="reset_lap">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #232528;
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  min-height: 500px;
+}
+.instruction{
+    color: #eaf6ff;
+    position: absolute;
+    top: 0;
+}
+.analog-stopwatch {
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  padding-top: 70px;
+  transition: all 0.5s;
+  position: relative;
+}
+.circlebar {
+  border: 4px solid #00a775;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 12px;
+  cursor: pointer;
+}
+.topbar {
+  border: 8px solid #00a775;
+  border-radius: 5px;
+  width: 20px;
+  position: absolute;
+  top: 42px;
+}
+.middlebar {
+  background-color: #00a775;
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  top: 50px;
+}
+.sidetopbar {
+  rotate: 45deg;
+  border: 8px solid #00a775;
+  border-radius: 5px;
+  position: absolute;
+  width: 20px;
+  left: 169px;
+  top: 0px;
+  cursor: pointer;
+}
+.sidemiddlebar {
+  rotate: 45deg;
+  border: 4px solid #00a775;
+  width: 10px;
+  position: absolute;
+  left: 170px;
+  top: 12px;
+}
+.clock {
+  background-color: #eaf6ff;
+  width: 200px;
+  height: 200px;
+  border: 15px solid #00a775;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 5px 5px 10px #9e9e9ed8, 1px 1px 2px lightblue;
+  cursor: pointer;
+}
+.hand {
+  position: absolute;
+  background-color: #232528;
+  transform-origin: center bottom;
+}
+.point {
+  width: 10px;
+  height: 10px;
+  top: 95px;
+  left: 95px;
+  border-radius: 50%;
+}
+.second-hand {
+  width: 4px;
+  height: 80px;
+  top: 20px;
+  left: 98px;
+}
+.msecond-hand {
+  width: 2px;
+  height: 90px;
+  top: 10px;
+  left: 99px;
+}
+.revsecond-hand {
+  width: 6px;
+  height: 10px;
+  top: 90px;
+  left: 97px;
+}
+.revmsecond-hand {
+  width: 4px;
+  height: 13px;
+  top: 87px;
+  left: 98px;
+}
+.digital-stopwatch {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.big {
+  color: #009ffd;
+  width: fit-content;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 4rem;
+  font-weight: 300;
+}
+.small {
+  color: #eaf6ff;
+  width: fit-content;
+  height: 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 200;
+  overflow: scroll;
+  scrollbar-width: none;
+  transition: all 0.5s;
+}
+ol li {
+  height: 0;
+  transition: all 0.5s;
+}
+#buttons {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#reset_lap {
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #4d5053;
+  overflow: hidden;
+}
+
+button {
+  background-color: #008d09;
+  border: none;
+  font-size: 1.5rem;
+  margin: 1rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 700px) {
+  .big {
+    font-size: 2rem;
+  }
+  .small {
+    font-size: 15px;
+  }
+  button {
+    width: 5rem;
+    height: 5rem;
+  }
+  .analog-stopwatch {
+    width: 50%;
+  }
+  .digital-stopwatch {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .analog-stopwatch {
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .digital-stopwatch {
+    width: 100%;
+  }
+}
+.glow {
+  box-shadow: 0 0 10px 3px rgba(209, 232, 232, 0.539);
+  transition: box-shadow 0.3s ease;
+}
+.glow:hover {
+  box-shadow: 0 0 15px 5px rgba(180, 245, 255, 0.7);
+}
